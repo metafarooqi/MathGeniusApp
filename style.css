@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Salsa&family=Sarabun&family=Saira+Semi+Condensed:wght@800');
+
+body {
+    background-color: gray !important;
+    height: 100vh !important;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pair-title{
+    font-family: 'Sarabun';font-weight: 700; font-size: 36px;cursor: pointer;
+}
+
+.container {
+    width: 414px !important;
+    margin: auto;
+    text-align: center;
+    height: 100vh !important;
+    padding: 0px;
+    background-color: #fff !important;
+}
+
+.header-container {
+    height: 168px;
+    background-color: #CF6AFF;
+    font-family: 'Bungee';
+    font-weight: 400;
+    color: #fff;
+}
+
+.button-container{
+    margin-top: 48px;
+    flex: 1;
+}
+
+.footer-container {
+    background-color: #CF6AFF;
+}
+
+.register-form {
+    position: absolute;
+    top: 384px;
+    width: 350px;
+    min-height: 101px !important;
+    font-size: 32px !important;
+}
+
+.register-form input{
+    font-family: 'Sarabun';
+    border:none !important;
+}
+
+.logo {
+    width: 249px !important;
+    height: 202px !important;
+}
+
+.footer-text-container {
+    min-height: 168px !important;
+    font-family: 'Bungee';
+    font-weight: 400;
+    font-size: 64px;
+    color: #fff;
+    background-color: #CF6AFF;
+    line-height: 50px;
+}
+
+.btn-custom {
+    width: 311px !important;
+    color: #fff;
+    background-color: #CF6AFF;
+    font-family: 'Salsa';
+    height: 60px;
+    border-radius: 10px;
+    font-size: 36px;
+    padding: auto;
+    text-decoration: none;
+}
+
+.btn-custom:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.button-container {
+    margin-top: 48px;
+}
+
+.fc-input {
+    height: 35px;
+    width: 40%;
+    border: none;
+    border-bottom: 2px dashed;
+    text-align: center;
+    font-size: 36px;
+    font-family: 'Sarabun';
+    font-weight: 600;
+}
+
+.odd-option-item {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E140B4;
+}
+
+.odd-option-text{
+    font-family: 'Salsa';font-weight: 400;
+    cursor: pointer;
+}
+.odd-option-image{
+    cursor: pointer;
+}
+.count-number {
+    font-family: 'Saira Semi Condensed';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 72px;
+    color: #D73D3D;
+}
+
+.count-word {
+    font-family: 'Saira Semi Condensed';
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.count-item-text{
+    background-color: #C4C4C4;width: 112px;height: 128px;padding-top: 45px;
+    cursor: pointer;
+}
+
+.count-item-text-last{
+    background-color: #C4C4C4;width: 112px;height: 128px;padding-top: 30px;padding-bottom: 20px;
+}
+
+.guest-text{
+    font-size: 18px;color:black;text-decoration: none;text-decoration: underline;
+}
+
+.account-register-text{
+    font-size: 18px;color:black;text-decoration: none;text-decoration: underline;
+}
+
+.opacity-40{
+    opacity: 40% !important;
+}
+
+
+.opacity-100{
+    opacity: 100% !important;
+}
+
+.f-Salsa{
+    font-family: 'Salsa';
+}
+
+.flex-grow-3 {
+    flex-grow: 3;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-33{
+    margin-top: 33px !important;
+}
+
+.mt-60N{
+    margin-top: -60px !important;
+}
+
+.mt-163 {
+    margin-top: 163px !important;
+}
+
+.mt-85 {
+    margin-top: 85px !important;
+}
+
+.ml-26{
+margin-left: 26px !important;
+}
+
+.ml-18{
+margin-left: 18px !important;
+}
+
+.mr-15{
+    margin-right: 15px !important;
+}
+
+.fs-40 {
+    font-size: 40px;
+}
+
+.fs-64 {
+    font-size: 64px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.fs-48{font-size: 48px !important;}
+
+.h-87 {
+    min-height: 87px !important;
+}
+
+.h-97 {
+    min-height: 97px !important;
+}
+
+.h-168 {
+    min-height: 168px !important;
+}
+
+.w-98 {
+    width: 98% !important;
+}
+
+.flex-1{
+    flex: 1 !important;
+}
+
+.pb-15{
+    padding-bottom: 15px !important;
+}
+
+.pl-5{
+    padding-left:5px !important;
+}
+
+.ml-10{
+    margin-left:10px !important;
+}
+
+.fa{
+    font-size: 20px !important;
+}
+

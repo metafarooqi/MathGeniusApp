@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Genuis App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body class="d-flex justify-content-center align-items-center" id="app">
+    <div class="container m-0 p-0 d-flex flex-column justify-content-between">
+        <div class="header-container d-flex justify-content-center align-items-center h-97 flex-row fs-36">
+            Count 1-5
+        </div>
+        <div class="content">
+            <div class="d-flex flex-column justify-content-between">
+                    <div class="d-flex flex-row align-items-end" v-for="(c,index) in countingArray">
+                        <div class="count-item-text">
+                            <img v-bind:src="`./images/${c.numberImage}`" v-bind:class="c.counted ? 'opacity-40' : 'opacity-100'" />
+                            <div class="count-word" v-bind:class="c.counted ? 'opacity-40' : 'opacity-100'">{{c.number}}</div>
+                        </div>
+                            <div  v-for="(apple,index2) in c.apples" class="flex-1 apple-image" style="cursor:pointer;" v-on:click="markAsCounted(apple,c)">
+                                <img v-if="index2 == 0 && index == 0" v-bind:src="`./images/${apple.image}`" v-bind:class="apple.counted ? 'opacity-40' : 'opacity-100'" />
+                                <img v-else v-bind:src="`./images/${apple.image}`" v-bind:class="apple.counted ? 'opacity-40' : 'opacity-100'" :height="apple.heigth" :width="apple.width" />
+                            </div>    
+                    </div>    
+            </div>
+        </div>
+      
+        <div class="footer-container h-87 d-flex justify-content-center align-items-end flex-column">
+            <a href="learn-count2.html?status=u"><img src="./images/arrow.png" class="mr-15" height="80" width="80" /></a>
+        </div>
+
+    </div>
+    <div class="modal" id="msg-modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Modal body text goes here.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script>
+        var array = [
+                        {
+                            numberImage : "1.png",
+                            number: "One",
+                            counted : false,
+                            apples:[
+                                {image : 'apple.png', height: '' , width: '',counted : false},
+                            ]
+                        },
+                        {
+                            numberImage : "2.png",
+                            number: "Two",
+                            counted : false,
+                            apples:[
+                                {image : 'apple.png', height: '84' , width: '93',counted : false},
+                                {image : 'apple.png', height: '84' , width: '93',counted : false}
+                            ]
+                        },
+                        {
+                            numberImage : "3.png",
+                            number: "Three",
+                            counted : false,
+                            apples:[
+                                {image : 'apple.png', height: '82' , width: '91',counted : false},
+                                {image : 'apple.png', height: '82' , width: '91',counted : false},
+                                {image : 'apple.png', height: '82' , width: '91',counted : false},
+                            ]
+                        },
+                        {
+                            numberImage : "4.png",
+                            number: "Four",
+                            counted : false,
+                            apples:[
+                                {image : 'apple.png', height: '54' , width: '65',counted : false},
+                                {image : 'apple.png', height: '54' , width: '65',counted : false},
+                                {image : 'apple.png', height: '54' , width: '65',counted : false},
+                                {image : 'apple.png', height: '54' , width: '65',counted : false},
+
+                            ]
+                        },
+                        {
+                            numberImage : "5.png",
+                            number: "Five",
+                            counted : false,
+                            apples:[
+                                {image : 'apple.png', height: '50' , width: '55',counted : false},
+                                {image : 'apple.png', height: '50' , width: '55',counted : false},
+                                {image : 'apple.png', height: '50' , width: '55',counted : false},
+                                {image : 'apple.png', height: '50' , width: '55',counted : false},
+                                {image : 'apple.png', height: '50' , width: '55',counted : false},
+                            ]
+                        },
+                    ];
+    //                 function pageRedirect() {
+    //     window.location.replace("https://www.tutorialrepublic.com/");
+    // }      
+    // setTimeout("pageRedirect()", 10000);
+         var app = Vue.createApp({
+            data() {
+                return {
+                    countingArray :array,
+                }
+            },
+            created(){
+               
+            },
+            methods : {
+                markAsCounted(c,p){
+                    c.counted = true;
+                    if(p.apples.filter(m => m.counted).length == p.apples.length){
+                        p.counted = true;
+                    }
+                    if(this.countingArray.filter(m => m.counted).length == this.countingArray.length){
+                        var arr = $(location).attr('href').split('/');
+                        var toReplace = arr[arr.length - 1];
+                        console.log(toReplace);
+                        var newURL = $(location).attr('href').replace(toReplace,'learn-count2.html') + '?status=c';
+                        console.log(newURL);
+                        window.location.replace(newURL);
+                    }
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
